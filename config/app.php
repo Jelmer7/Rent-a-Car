@@ -140,6 +140,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Zizaco\Entrust\EntrustServiceProvider::class,
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -194,6 +195,7 @@ return [
 
     'aliases' => [
 
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
