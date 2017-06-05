@@ -18,3 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('contact', function(){
+    return view('contact.show');
+});
+
+Route::group(['middleware' => ['role:admin']], function () {
+    Route::resource('users', 'UsersController');
+});
+
+

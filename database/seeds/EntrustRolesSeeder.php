@@ -25,7 +25,7 @@ class EntrustRolesSeeder extends Seeder
                 'description' => 'Beheerder van de website',
                 'permissions' => [
                     'cars.index', 'cars.create', 'cars.edit', 'cars.delete',
-                    'user.index', 'user.create', 'user.edit', 'user.delete',
+                    'users.index', 'users.create', 'users.edit', 'users.delete',
                     'booking.delete'
                 ]
             ],

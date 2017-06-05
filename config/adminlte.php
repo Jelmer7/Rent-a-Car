@@ -111,15 +111,14 @@ return [
         'MAIN NAVIGATION',
         [
             'text' => 'Blog',
-            'url'  => 'admin/blog',
+            'url'  => '/',
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-//            'label'       => ,
-//            'label_color' => 'success',
+            'text'        => 'Users',
+            'url'         => '/users',
+            'icon'        => 'users',
+            'can'         => 'cars.create'
         ],
 //        'ACCOUNT SETTINGS',
 //        [
