@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminlte::passwords.email')
 
 <!-- Main Content -->
 @section('content')
