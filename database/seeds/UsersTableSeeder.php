@@ -20,9 +20,14 @@ class UsersTableSeeder extends Seeder
 
         $users = [
             [
-                'name' => 'Barrie Beheerder',
+                'initials' => 'M.',
+                'insertion' => 'de',
+                'surname' => 'Medewerker',
                 'email' => 'test@test.nl',
                 'password' => bcrypt('123456'),
+                'address' => 'medewerkerweg 3',
+                'postal_code' => '7652 TD',
+                'residence' => 'Meeddorp',
                 'roles' => ['employee']
             ]
         ];
