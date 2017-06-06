@@ -115,6 +115,11 @@ return [
             'can'  => 'profile',
         ],
         [
+            'text' => 'Autos',
+            'url'  => '/rent',
+            'can'  => 'rent',
+        ],
+        [
             'text'        => 'Users',
             'url'         => '/users',
             'icon'        => 'users',

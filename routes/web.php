@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/rent', 'RentController@index');
+
 Route::get('contact', function(){
     return view('contact.show');
 });
