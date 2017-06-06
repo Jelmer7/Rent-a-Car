@@ -19,13 +19,19 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/rent', 'RentController@index');
+Route::match(['get', 'post'],'/rent', 'RentController@index')->name('rent');
+Route::get('/rent/form', 'RentController@form');
+
+Route::get('add/{id}', 'CartController@add');
+
+Route::get('deleterow/{id}', 'CartController@delete');
 
 Route::get('contact', function(){
     return view('contact.show');
 });
 
-Route::group(['middleware' => ['role:admin']], function () {
+
+Route::group(['middleware' => ['role:employee']], function () {
     Route::resource('users', 'UsersController');
 });
 
