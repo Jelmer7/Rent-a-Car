@@ -23,7 +23,7 @@ class UsersTableSeeder extends Seeder
                 'name' => 'Barrie Beheerder',
                 'email' => 'test@test.nl',
                 'password' => bcrypt('123456'),
-                'roles' => ['admin']
+                'roles' => ['employee']
             ]
         ];
 

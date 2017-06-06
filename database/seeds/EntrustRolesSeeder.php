@@ -20,26 +20,18 @@ class EntrustRolesSeeder extends Seeder
 
         $roles = [
             [
-                'name' => 'admin',
-                'display_name' => 'Beheerder',
-                'description' => 'Beheerder van de website',
-                'permissions' => [
-                    'cars.index', 'cars.create', 'cars.edit', 'cars.delete',
-                    'users.index', 'users.create', 'users.edit', 'users.delete',
-                    'booking.delete'
-                ]
-            ],
-            [
                 'name' => 'employee',
                 'display_name' => 'Medewerker',
                 'description' => 'Medewerker die de daglijst kan inzien.',
-                'permissions' => ['daylist']
+                'permissions' => ['daylist',
+                    'cars.index', 'cars.create', 'cars.edit', 'cars.delete',
+                    'users.index', 'users.create', 'users.edit', 'users.delete']
             ],
             [
                 'name' => 'customer',
                 'display_name' => 'Klant',
                 'description' => 'Geregistreerde klant die het huursysteem kan gebruken.',
-                'permissions' => ['rent']
+                'permissions' => ['rent', 'profile']
             ]
         ];
 

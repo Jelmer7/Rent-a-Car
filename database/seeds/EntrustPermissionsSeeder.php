@@ -23,6 +23,11 @@ class EntrustPermissionsSeeder extends Seeder
                 'description' => 'Auto\'s kunnen huren'
             ],
             [
+                'name' => 'profile',
+                'display_name' => 'Profiel aanpassen',
+                'description' => 'Eigen profiel aanpassen'
+            ],
+            [
                 'name' => 'daylist',
                 'display_name' => 'Dag lijst',
                 'description' => 'Dag lijst kunnen inzien'
@@ -61,11 +66,6 @@ class EntrustPermissionsSeeder extends Seeder
                 'name' => 'users.delete',
                 'display_name' => 'Gebruikers verwijderen',
                 'description' => 'Gebruikers kunnen verwijderen'
-            ],
-            [
-            'name' => 'booking.delete',
-            'display_name' => 'Booking verwijderen',
-            'description' => 'Het verwijderen van een booking'
             ],
         ];
 
