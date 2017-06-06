@@ -12,13 +12,13 @@
                 </div>
             </div>
         </div>
-@role('admin')
+@role('employee')
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-warning">
-                <div class="panel-heading">Admin msg</div>
+                <div class="panel-heading">Employer msg</div>
 
                 <div class="panel-body">
-                    Only Admin roles will see this.
+                    Only Employee roles will see this.
                 </div>
             </div>
         </div>

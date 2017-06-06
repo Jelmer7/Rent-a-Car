@@ -110,9 +110,9 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
-            'text' => 'Blog',
-            'url'  => '/',
-            'can'  => 'manage-blog',
+            'text' => 'Profiel wijzigen',
+            'url'  => '/profile',
+            'can'  => 'profile',
         ],
         [
             'text'        => 'Users',
