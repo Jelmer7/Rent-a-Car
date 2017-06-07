@@ -118,6 +118,7 @@ return [
             'text' => 'Autos',
             'url'  => '/rent',
             'can'  => 'rent',
+            'icon' => 'car'
         ],
         [
             'text'        => 'Users',
