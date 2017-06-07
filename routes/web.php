@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index');
 Route::match(['get', 'post'],'/rent', 'RentController@index')->name('rent');
 Route::get('/rent/form', 'RentController@form');
 Route::get('/rent/check', 'RentController@check');
+Route::get('/rent/invoice', 'RentController@invoice');
 
 Route::get('add/{id}', 'CartController@add');
 

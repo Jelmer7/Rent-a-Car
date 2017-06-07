@@ -61,7 +61,8 @@
                             @endforeach
                             </tbody>
                         </table>
-
+                        <br>
+                        <a href="{{url('rent/invoice')}}" class="btn btn-success">Factuur maken</a>
                     </div>
                 </div>
             </div>

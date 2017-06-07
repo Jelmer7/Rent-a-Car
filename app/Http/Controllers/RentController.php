@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
+use App\Invoice;
 
 class RentController extends Controller
 {
@@ -47,6 +48,27 @@ class RentController extends Controller
         $user = Auth::user();
         $cart = Cart::content();
         return view('rent.check', compact('cart', 'user'));
+    }
+
+    public function invoice(){
+        $user = Auth::user();
+        $cart = Cart::content();
+        $invoice = new Invoice();
+        $invoice->user_id = $user->id;
+        $invoice->date = Carbon::now();
+        $invoice->save();
+
+        foreach($cart as $item){
+
+            $line = new Invoice_line();
+            $line->starting_date = $item->options->starting_date;
+            $line->end_date = $item->options->end_date;
+            $line->car_id = $item->id;
+            $line->invoice_id = $invoice->id;
+            $line->save();
+        }
+        Cart::destroy();
+        //return invoice page;
     }
 
 }

@@ -7,4 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Invoice extends Model
 {
     public $table = 'invoices';
+    public $timestamps = false;
 }
