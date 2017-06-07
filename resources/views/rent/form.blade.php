@@ -24,7 +24,10 @@
                         <input type="text" class="form-control pull-right" name="daterange"/>
 
                         </div>
-                        {{Form::submit('Click Me!')}}
+                        <br>
+                        {{Form::submit('Click Me!', array(
+                        'class' => 'btn btn-block btn-success'
+                        ))}}
                     </div>
                 </div>
             </div>
@@ -83,6 +86,10 @@
     </section>
 
     <script>
-        $('input[name="daterange"]').daterangepicker();
+        $('input[name="daterange"]').daterangepicker(
+            {
+                minDate: new Date((new Date().getTime() + 24 * 60 * 60 * 1000))
+            }
+        );
     </script>
 @endsection

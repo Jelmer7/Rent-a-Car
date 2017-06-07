@@ -68,7 +68,7 @@ class RentController extends Controller
             $line->save();
         }
         Cart::destroy();
-        //return invoice page;
+        return redirect('invoices/'. $invoice->id);
     }
 
 }

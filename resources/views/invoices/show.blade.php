@@ -16,10 +16,15 @@
             <div class="col-md-12">
                 <div class="box box-default fixed">
                     <div class="box-body">
+                        <h2>Factuur</h2>
+                        <br>
                         <p>Rent-a-Car</p>
                         <p>Parkweg 1</p>
                         <p>7772 XP, Hardenberg</p>
                         <p>0523-123456</p>
+                        <br><br>
+                        <p>Factuurnummer:{{$invoice->id}}</p>
+                        <p>Datum: {{$invoice->date}}</p>
                         <br><br>
                         <p>{{$user->initials}}
                             {{$user->insertion}}

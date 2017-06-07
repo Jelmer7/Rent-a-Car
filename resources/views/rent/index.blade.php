@@ -1,6 +1,9 @@
 @extends('adminlte::page')
 
 @section('content')
+    @if(isset($starting_date))
+        @php(redirect('rent/form'))
+    @endif
     <section class="content-header">
         <div class="content-header">
             <h1>Auto's</h1>
@@ -13,19 +16,48 @@
     <div class="col-md-7">
         <div class="box box-default">
             <div class="box-header with-border">
-                <h3 class="box-title">Te huren auto's voor {{$starting_date->toFormattedDateString()}} - {{$end_date->toFormattedDateString()}}</h3>
+                <h3 class="box-title">Te huren auto's voor {{$starting_date->toFormattedDateString()}} - {{$end_date->toFormattedDateString()}}
+                <a href="{{url('rent/form')}}"><span class="fa fa-edit"></span></a> </h3>
             </div>
             <div class="box-body">
-                @foreach($cars as $car)
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Merk</th>
+                        <th>Type</th>
+                        <th>Kenteken</th>
+                        <th>Prijs per dag</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
 
-                    {{$car->brand}} ||| {{$car->type}}
-                    @if(in_array($car->id, $rented_cars))
-                        <strong>verhuurd</strong>
-                    @else
-                    <a href="{{ url('/add/' . $car->id) }}">+</a>
-                    @endif
-                    <br> <br>
-                @endforeach
+                    <tbody>
+
+                    @foreach($cars as $car)
+                        <tr>
+                            <td>
+                                {{$car->brand}}
+                            </td>
+                            <td>
+                                {{$car->type}}
+                            </td>
+                            <td>
+                                {{$car->license_plate}}
+                            </td>
+                            <td>€ {{$car->price}}</td>
+                            <td>
+                                @if(in_array($car->id, $rented_cars))
+                                    <span class="badge bg-red">Verhuurd</span>
+                                @else
+                                    <a href="{{ url('/add/' . $car->id) }}"><span class="badge bg-green">Toevoegen</span></a>
+                                @endif
+                            </td>
+
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>
