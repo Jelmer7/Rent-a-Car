@@ -55,9 +55,7 @@
                                 <td>€ {{$row->price}}</td>
                                 <td><a href="{{url('deleterow/' . $row->rowId)}}">--</a></td>
                             </tr>
-
                         @endforeach
-
                         </tbody>
                     </table>
                 </div>

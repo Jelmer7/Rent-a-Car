@@ -13,12 +13,17 @@
     <div class="col-md-7">
         <div class="box box-default">
             <div class="box-header with-border">
-                <h3 class="box-title">Te huren auto's voor {{$starting_date}} - {{$end_date}}</h3>
+                <h3 class="box-title">Te huren auto's voor {{$starting_date->toFormattedDateString()}} - {{$end_date->toFormattedDateString()}}</h3>
             </div>
             <div class="box-body">
                 @foreach($cars as $car)
+
                     {{$car->brand}} ||| {{$car->type}}
+                    @if(in_array($car->id, $rented_cars))
+                        <strong>verhuurd</strong>
+                    @else
                     <a href="{{ url('/add/' . $car->id) }}">+</a>
+                    @endif
                     <br> <br>
                 @endforeach
             </div>
@@ -36,7 +41,10 @@
             <thead>
             <tr>
                 <th>Product</th>
-                <th>Price</th>
+                <th>Type</th>
+                <th>Prijs per dag</th>
+                <th>Van</th>
+                <th>Tot</th>
                 <th>--</th>
             </tr>
             </thead>
@@ -48,15 +56,24 @@
                 <td>
                     <p>{{$row->options->brand}}</p>
                 </td>
+                <td>
+                    {{$row->options->type}}
+                </td>
                 <td>€ {{$row->price}}</td>
+                <td>
+                    {{$row->options->starting_date->toFormattedDateString()}}
+                </td>
+                <td>
+                    {{$row->options->end_date->toFormattedDateString()}}
+                </td>
 
                 <td><a href="{{url('deleterow/' . $row->rowId)}}">--</a></td>
             </tr>
-
             @endforeach
-
             </tbody>
         </table>
+                    <br>
+                    <a href="{{url('rent/check')}}" class="btn btn-success">Afrekenen</a>
             </div>
             </div>
         </div>

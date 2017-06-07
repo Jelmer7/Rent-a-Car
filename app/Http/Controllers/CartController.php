@@ -14,8 +14,8 @@ class CartController extends Controller
         $car = Car::findorfail($id);
         Cart::add($car->id, 'car', 1, $car->price, ['brand' => $car->brand,
             'type' => $car->type,
-            'starting_date' => $request['starting_date'],
-            'end_date' => $request['end_date']
+            'starting_date' => session('starting_date'),
+            'end_date' => session('end_date')
         ]);
         return redirect('rent');
     }
