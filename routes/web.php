@@ -23,6 +23,9 @@ Route::match(['get', 'post'],'/rent', 'RentController@index')->name('rent');
 Route::get('/rent/form', 'RentController@form');
 Route::get('/rent/check', 'RentController@check');
 Route::get('/rent/invoice', 'RentController@invoice');
+Route::get('invoices', 'InvoicesController@index');
+Route::get('invoices/{id}', 'InvoicesController@show');
+Route::get('invoices/{id}/pdf', 'InvoicesController@pdf');
 
 Route::get('add/{id}', 'CartController@add');
 

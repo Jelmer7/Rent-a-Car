@@ -42,6 +42,7 @@
             <tr>
                 <th>Product</th>
                 <th>Type</th>
+                <th>Kenteken</th>
                 <th>Prijs per dag</th>
                 <th>Van</th>
                 <th>Tot</th>
@@ -58,6 +59,9 @@
                 </td>
                 <td>
                     {{$row->options->type}}
+                </td>
+                <td>
+                    {{$row->options->license_plate}}
                 </td>
                 <td>€ {{$row->price}}</td>
                 <td>

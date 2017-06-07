@@ -24,7 +24,7 @@
                         <table class="table table-hover table-bordered">
                             <thead>
                             <tr>
-                                <th>Product</th>
+                                <th>Merk</th>
                                 <th>Type</th>
                                 <th>Prijs per dag</th>
                                 <th>Van</th>
@@ -44,6 +44,7 @@
                                     <td>
                                         {{$row->options->type}}
                                     </td>
+
                                     <td>€ {{$row->price}}</td>
                                     <td>
                                         {{$row->options->starting_date->toFormattedDateString()}}

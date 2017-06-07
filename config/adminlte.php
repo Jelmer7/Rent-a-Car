@@ -121,6 +121,12 @@ return [
             'icon' => 'car'
         ],
         [
+            'text' => 'Facturen',
+            'url'  => '/invoices',
+            'can'  => 'rent',
+            'icon' => 'file-text-o'
+        ],
+        [
             'text'        => 'Users',
             'url'         => '/users',
             'icon'        => 'users',

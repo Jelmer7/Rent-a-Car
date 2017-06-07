@@ -15,7 +15,8 @@ class CartController extends Controller
         Cart::add($car->id, 'car', 1, $car->price, ['brand' => $car->brand,
             'type' => $car->type,
             'starting_date' => session('starting_date'),
-            'end_date' => session('end_date')
+            'end_date' => session('end_date'),
+            'license_plate' => $car->license_plate
         ]);
         return redirect('rent');
     }

@@ -40,7 +40,11 @@
                         <thead>
                         <tr>
                             <th>Product</th>
-                            <th>Price</th>
+                            <th>Type</th>
+                            <th>Kenteken</th>
+                            <th>Prijs per dag</th>
+                            <th>Van</th>
+                            <th>Tot</th>
                             <th>--</th>
                         </tr>
                         </thead>
@@ -52,7 +56,20 @@
                                 <td>
                                     <p>{{$row->options->brand}}</p>
                                 </td>
+                                <td>
+                                    {{$row->options->type}}
+                                </td>
+                                <td>
+                                    {{$row->options->license_plate}}
+                                </td>
                                 <td>€ {{$row->price}}</td>
+                                <td>
+                                    {{$row->options->starting_date->toFormattedDateString()}}
+                                </td>
+                                <td>
+                                    {{$row->options->end_date->toFormattedDateString()}}
+                                </td>
+
                                 <td><a href="{{url('deleterow/' . $row->rowId)}}">--</a></td>
                             </tr>
                         @endforeach
