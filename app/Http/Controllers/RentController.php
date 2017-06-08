@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Support\Facades\Auth;
 use App\Invoice;
+use App;
 
 class RentController extends Controller
 {
@@ -69,6 +70,31 @@ class RentController extends Controller
         }
         Cart::destroy();
         return redirect('invoices/'. $invoice->id);
+    }
+
+    public function daylist(Request $request){
+        $date = Carbon::parse($request['date']);
+
+        $invoice_lines = Invoice_line::where('starting_date', '=', $date)->get();
+        return view('daylist.index', compact('invoice_lines', 'date'));
+    }
+
+    public function daylistform(){
+        return view('daylist.form');
+    }
+
+    public function pdf($date){
+        $invoice_lines = Invoice_line::where('starting_date', '=', $date)->get();
+
+        $data = [
+            'invoice_lines' => $invoice_lines
+        ];
+        // Make new dompdf wrapper for the pdf
+        $pdf = App::make('dompdf.wrapper');
+        // Throw the printing view in the pdf
+        $pdf->loadhtml(view('daylist.pdf',$data))->setPaper('a4');
+        // Stream the pdf to the user
+        return $pdf->stream();
     }
 
 }

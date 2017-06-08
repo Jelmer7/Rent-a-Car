@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'blue-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -110,6 +110,11 @@ return [
     'menu' => [
         'MAIN NAVIGATION',
         [
+            'text' => 'Contact',
+            'url'  => '/contact',
+            'icon' => 'phone'
+        ],
+        [
             'text' => 'Profiel wijzigen',
             'url'  => '/profile',
             'can'  => 'profile',
@@ -130,6 +135,18 @@ return [
             'text'        => 'Users',
             'url'         => '/users',
             'icon'        => 'users',
+            'can'         => 'users.create'
+        ],
+        [
+            'text'        => 'Dag Lijst',
+            'url'         => '/daylist/form',
+            'icon'        => 'car',
+            'can'         => 'daylist'
+        ],
+        [
+            'text'        => 'Auto\'s',
+            'url'         => 'cars',
+            'icon'        => 'car',
             'can'         => 'cars.create'
         ],
 //        'ACCOUNT SETTINGS',

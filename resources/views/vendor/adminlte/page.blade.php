@@ -41,6 +41,7 @@
             <!-- Logo -->
             <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="logo">
                 <!-- mini logo for sidebar mini 50x50 pixels -->
+                <img src="{{asset('img/logo.jpg')}}" alt="" width="50px" height="50px">
                 <span class="logo-mini">{!! config('adminlte.logo_mini', '<b>A</b>LT') !!}</span>
                 <!-- logo for regular state and mobile devices -->
                 <span class="logo-lg">{!! config('adminlte.logo', '<b>Admin</b>LTE') !!}</span>

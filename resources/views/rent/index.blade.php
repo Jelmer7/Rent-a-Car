@@ -26,6 +26,9 @@
                         <th>Merk</th>
                         <th>Type</th>
                         <th>Kenteken</th>
+                        <th>GPS</th>
+                        <th>Omschrijving</th>
+                        <th>Klasse</th>
                         <th>Prijs per dag</th>
                         <th>Status</th>
                     </tr>
@@ -43,6 +46,20 @@
                             </td>
                             <td>
                                 {{$car->license_plate}}
+                            </td>
+                            <td>
+                                @if($car->GPS == 1)
+                                    Ja
+                                @else
+                                    Nee
+                                @endif
+
+                            </td>
+                            <td>
+                                {{$car->description}}
+                            </td>
+                            <td>
+                                {{$car->class}}
                             </td>
                             <td>€ {{$car->price}}</td>
                             <td>
@@ -78,7 +95,7 @@
                 <th>Prijs per dag</th>
                 <th>Van</th>
                 <th>Tot</th>
-                <th>--</th>
+                <th></th>
             </tr>
             </thead>
 
@@ -103,13 +120,15 @@
                     {{$row->options->end_date->toFormattedDateString()}}
                 </td>
 
-                <td><a href="{{url('deleterow/' . $row->rowId)}}">--</a></td>
+                <td><a href="{{url('deleterow/' . $row->rowId)}}"><span class="fa fa-trash"></span></a></td>
             </tr>
             @endforeach
             </tbody>
         </table>
+                    @if(Cart::content()->count() > 0)
                     <br>
                     <a href="{{url('rent/check')}}" class="btn btn-success">Afrekenen</a>
+                    @endif
             </div>
             </div>
         </div>

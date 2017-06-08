@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 
 @section('content')
-    <section class="content-header">
+    <section class="content-header col-md-offset-2">
         <div class="content-header">
             <h1>Factuur
                 <a href={{url('invoices/' . $invoice->id . '/pdf')}}><span class="fa fa-file-pdf-o"></span></a>
@@ -13,7 +13,7 @@
     <section class="content">
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-8 col-md-offset-2">
                 <div class="box box-default fixed">
                     <div class="box-body">
                         <h2>Factuur</h2>
@@ -38,6 +38,9 @@
                                 <th>Merk</th>
                                 <th>Type</th>
                                 <th>Kenteken</th>
+                                {{--<th>GPS</th>--}}
+                                {{--<th>Omschrijving</th>--}}
+                                {{--<th>Klasse</th>--}}
                                 <th>Prijs per dag</th>
                                 <th>Van</th>
                                 <th>Tot</th>
@@ -59,6 +62,19 @@
                                     <td>
                                         {{$line->car->license_plate}}
                                     </td>
+                                    {{--<td>--}}
+                                        {{--@if($line->car->gps == 1)--}}
+                                            {{--Ja--}}
+                                        {{--@else--}}
+                                            {{--Nee--}}
+                                        {{--@endif--}}
+                                    {{--</td>--}}
+                                    {{--<td>--}}
+                                        {{--{{$line->car->description}}--}}
+                                    {{--</td>--}}
+                                    {{--<td>--}}
+                                        {{--{{$line->car->class}}--}}
+                                    {{--</td>--}}
                                     <td>
                                         € {{$line->car->price}}
                                     </td>
@@ -96,6 +112,9 @@
                                 <td>
 
                                 </td>
+                                {{--<td></td>--}}
+                                {{--<td></td>--}}
+                                {{--<td></td>--}}
                                 <td>
                                     {{$total}}
                                 </td>

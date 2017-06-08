@@ -15,12 +15,12 @@ class RelationsMigration extends Migration
     {
         Schema::table('invoices', function($table){
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
 
         Schema::table('invoice_lines', function($table){
             $table->integer('invoice_id')->unsigned();
-            $table->foreign('invoice_id')->references('id')->on('invoices')->onDelete('cascade');
+            $table->foreign('invoice_id')->references('id')->on('invoices')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('car_id')->unsigned();
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
         });
