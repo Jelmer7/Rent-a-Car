@@ -75,8 +75,8 @@
                 <div class="box box-default fixed">
                     <div class="box-body">
                         <div class="col-md-4">
-                            <p>Wij zijn open voor bezoek op <strong>Maandag</strong> t/m <strong>Vrijdag</strong></p>
-                            <p>Openingstijden: <strong>8:00 - 17:00</strong></p>
+                            <p>Wij zijn open voor bezoek van <strong>Maandag</strong> t/m <strong>Vrijdag</strong> <br>
+                            Openingstijden: <strong>8:00 - 17:00</strong></p>
                         </div>
                         <img src="{{asset('img/garage.jpg')}}" alt="" width="100%">
                     </div>
