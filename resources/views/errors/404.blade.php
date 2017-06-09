@@ -1,1 +1,1 @@
-<h1>Hallo, deze pagina is niet gevonden</h1>
+<img src="{{asset('img/404.jpg')}}" alt="" style="display:block;margin:0 auto;">
