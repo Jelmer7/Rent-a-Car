@@ -85,7 +85,7 @@ return [
     |
     */
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
 
     'logout_url' => 'logout',
 
@@ -121,7 +121,7 @@ return [
         ],
         [
             'text' => 'Autos',
-            'url'  => '/rent',
+            'url'  => '/rent/form',
             'can'  => 'rent',
             'icon' => 'car'
         ],

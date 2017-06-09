@@ -25,7 +25,7 @@
 
                         </div>
                         <br>
-                        {{Form::submit('Click Me!', array(
+                        {{Form::submit('Zoeken!', array(
                         'class' => 'btn btn-block btn-success'
                         ))}}
                     </div>
@@ -48,7 +48,7 @@
                             <th>Prijs per dag</th>
                             <th>Van</th>
                             <th>Tot</th>
-                            <th>--</th>
+                            <th></th>
                         </tr>
                         </thead>
 

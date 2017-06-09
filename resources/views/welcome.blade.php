@@ -1,95 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('adminlte::page')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+@section('content')
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box box-default fixed">
+                    <div class="box-body">
+                        <img src="{{asset('img/auto1.jpg')}}" alt="" width="100%">
+                    </div>
                 </div>
-            @endif
+            </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+            <div class="col-md-4">
+                <div class="box box-default fixed">
+                    <div class="box-body">
+                        <img src="{{asset('img/auto2.jpg')}}" alt="" width="100%">
+                    </div>
                 </div>
+            </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            <div class="col-md-4">
+                <div class="box box-default fixed">
+                    <div class="box-body">
+                        <img src="{{asset('img/auto3.jpg')}}" alt="" width="100%">
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+
+        <div class="col-md-3 col-md-offset-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-aqua">
+                    <i class="fa fa-phone"></i>
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">
+                        Bellen
+                    </span>
+                    <span class="info-box-number">
+                        0512-345678
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="info-box">
+                <span class="info-box-icon bg-aqua">
+                    <i class="fa fa-envelope"></i>
+                </span>
+                <div class="info-box-content">
+                    <span class="info-box-text">
+                        Email
+                    </span>
+                    <span class="info-box-number">
+                        info@rentacar.nl
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box box-default fixed">
+                    <div class="box-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida dictum odio, sodales efficitur neque ullamcorper fringilla. Fusce commodo venenatis sem vel rhoncus. Proin id lorem sed lacus cursus tincidunt. Vestibulum eleifend egestas nulla vel maximus. Morbi vel interdum lorem. Nulla et eleifend dolor, sed venenatis libero. Suspendisse vitae libero ut dolor cursus semper at at velit. Nulla quis sollicitudin libero. Cras vitae dui nisl.
+                            Maecenas dolor ligula, consequat nec erat id, commodo luctus ex. Praesent ex nunc, venenatis quis egestas sed, bibendum ac magna. Donec et mauris nulla. Curabitur eleifend blandit congue. In luctus lacinia ante non pretium. Maecenas vitae odio non lacus rutrum imperdiet. Aliquam volutpat luctus risus. Fusce volutpat neque iaculis diam tincidunt consectetur. Phasellus est massa, lobortis in interdum non, consequat sit amet felis. Nulla consequat, dui sit amet ornare luctus, nibh velit vestibulum nisi, a tincidunt enim sapien nec sapien. Nunc sodales nulla lobortis nunc ullamcorper sagittis sit amet non ligula. Aenean rutrum sapien diam, id fermentum erat eleifend et. In vel risus eu ipsum vehicula dignissim. Vestibulum nulla leo, pretium sed volutpat sed, finibus at ex. Vivamus consequat ipsum et nisi tincidunt, in vehicula neque convallis.
+                            Donec sagittis porta diam vitae iaculis. Ut magna leo, aliquet ut egestas quis, ornare ac quam. Donec ullamcorper sem eu semper dignissim. Suspendisse rhoncus feugiat sapien at sollicitudin. Aenean vitae eleifend mauris. Pellentesque auctor gravida metus, hendrerit venenatis ipsum tristique non. Proin tempus venenatis neque, eget ultrices urna. Maecenas ac varius massa, quis dapibus turpis.
+                        </p>
+                        <p>
+                            Vestibulum a sem ullamcorper, congue eros eget, porttitor augue. Etiam et posuere arcu. Sed eget augue sed metus interdum bibendum eu at lectus. Sed fringilla ante non nisi pretium faucibus. Nunc mattis risus ex, a dapibus nibh lacinia id. Duis non mauris vel libero maximus efficitur at et justo. Aliquam vestibulum, felis a dignissim egestas, felis nisl pharetra tellus, nec bibendum urna felis quis neque. Nunc non commodo leo, nec sollicitudin mi. Etiam eu molestie augue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

@@ -25,7 +25,7 @@
 
                         </div>
                         <br>
-                        {{Form::submit('Click Me!', array(
+                        {{Form::submit('Opvragen!', array(
                         'class' => 'btn btn-block btn-success'
                         ))}}
                     </div>
