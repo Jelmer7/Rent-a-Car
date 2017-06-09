@@ -58,6 +58,7 @@ class CarController extends Controller
 
     public function destroy($id){
         $car = Car::findorfail($id);
+        //Fix omdat cascading niet werkt
         $lines = $car->invoice_line;
         foreach($lines as $line){
             $line->delete();
