@@ -19,7 +19,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('license_plate') ? 'has-error' : '' }}">
                             {!! Form::text('license_plate', null, ['class' => 'form-control']) !!}
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('license_plate'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('license_plate') }}</strong>
@@ -29,7 +29,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('brand') ? 'has-error' : '' }}">
                             {!! Form::text('brand', null, ['class' => 'form-control']) !!}
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('brand'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('brand') }}</strong>
@@ -39,7 +39,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('type') ? 'has-error' : '' }}">
                             {!! Form::text('type', null, ['class' => 'form-control']) !!}
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('type'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('type') }}</strong>
@@ -49,7 +49,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('price') ? 'has-error' : '' }}">
                             {!! Form::text('price', null, ['class' => 'form-control']) !!}
-                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                            <span class="glyphicon glyphicon-euro form-control-feedback"></span>
                             @if ($errors->has('price'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('price') }}</strong>
@@ -59,7 +59,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('class') ? 'has-error' : '' }}">
                             {!! Form::text('class', null, ['class' => 'form-control']) !!}
-                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('class'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('class') }}</strong>
@@ -79,7 +79,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('description') ? 'has-error' : '' }}">
                             {!! Form::text('description', null, ['class' => 'form-control']) !!}
-                            <span class="glyphicon glyphicon-h ome form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('description'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('description') }}</strong>
@@ -89,7 +89,7 @@
 
                         <div class="form-group has-feedback {{ $errors->has('description') ? 'has-error' : '' }}">
                             GPS: {{ Form::checkbox('GPS', 1, ['class' => 'form-control'])}}
-                            <span class="glyphicon glyphicon-h ome form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('description'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('description') }}</strong>

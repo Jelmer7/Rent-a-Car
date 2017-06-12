@@ -45,7 +45,7 @@
                     <span class="info-box-text">
                         Adres
                     </span>
-                <span class="info-box-number">
+                <span class="info-box-number" style="font-size:14px!important;">
                         Parkweg 1 <br>
                     7772 XP, Hardenberg
 
@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+
         <div class="row">
             <div class="col-md-12">
                 <div class="box box-default fixed">
@@ -83,5 +83,5 @@
                 </div>
             </div>
         </div>
-    </div>
+
 @endsection

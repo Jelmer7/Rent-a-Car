@@ -120,7 +120,7 @@ return [
             'can'  => 'profile',
         ],
         [
-            'text' => 'Autos',
+            'text' => 'Auto\'s',
             'url'  => '/rent/form',
             'can'  => 'rent',
             'icon' => 'car'
@@ -132,7 +132,7 @@ return [
             'icon' => 'file-text-o'
         ],
         [
-            'text'        => 'Users',
+            'text'        => 'Medewerkers',
             'url'         => '/users',
             'icon'        => 'users',
             'can'         => 'users.create'

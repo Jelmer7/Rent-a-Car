@@ -20,7 +20,7 @@
                         <div class="form-group has-feedback {{ $errors->has('license_plate') ? 'has-error' : '' }}">
                             <input type="text" name="license_plate" class="form-control" value="{{ old('license_plate') }}"
                                    placeholder="{{ 'Kenteken' }}">
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('license_plate'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('license_plate') }}</strong>
@@ -31,7 +31,7 @@
                         <div class="form-group has-feedback {{ $errors->has('brand') ? 'has-error' : '' }}">
                             <input type="text" name="brand" class="form-control" value="{{ old('brand') }}"
                                    placeholder="{{ 'Merk'}}">
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('brand'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('brand') }}</strong>
@@ -42,7 +42,7 @@
                         <div class="form-group has-feedback {{ $errors->has('type') ? 'has-error' : '' }}">
                             <input type="text" name="type" class="form-control" value="{{ old('type') }}"
                                    placeholder="{{ 'Type'  }}">
-                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('type'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('type') }}</strong>
@@ -53,7 +53,7 @@
                         <div class="form-group has-feedback {{ $errors->has('price') ? 'has-error' : '' }}">
                             <input type="text" name="price" class="form-control" value="{{ old('price') }}"
                                    placeholder="{{'Prijs'}}">
-                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                            <span class="glyphicon glyphicon-euro form-control-feedback"></span>
                             @if ($errors->has('price'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('price') }}</strong>
@@ -64,7 +64,7 @@
                         <div class="form-group has-feedback {{ $errors->has('class') ? 'has-error' : '' }}">
                             <input type="text" name="class" class="form-control"
                                    placeholder="{{'Klasse' }}">
-                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('class'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('class') }}</strong>
@@ -85,7 +85,7 @@
                         <div class="form-group has-feedback {{ $errors->has('description') ? 'has-error' : '' }}">
                             <input type="text" name="description" class="form-control" value="{{ old('email') }}"
                                    placeholder="{{'Omschrijving'}}">
-                            <span class="glyphicon glyphicon-h ome form-control-feedback"></span>
+                            <span class="fa fa-car form-control-feedback"></span>
                             @if ($errors->has('description'))
                                 <span class="help-block">
                             <strong>{{ $errors->first('description') }}</strong>

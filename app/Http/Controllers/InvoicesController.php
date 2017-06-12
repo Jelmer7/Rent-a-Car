@@ -24,8 +24,9 @@ class InvoicesController extends Controller
         foreach($invoice_lines as $line){
             $total += $line->starting_date->diffInDays($line->end_date) * $line->car->price;
         }
-
-        return view('invoices.show', compact('invoice', 'user', 'invoice_lines', 'total'));
+        $btw = $total / 100 * 21;
+        $total += $btw;
+        return view('invoices.show', compact('invoice', 'user', 'invoice_lines', 'total', 'btw'));
     }
 
     public function pdf($id){
@@ -37,11 +38,14 @@ class InvoicesController extends Controller
             $total += $line->starting_date->diffInDays($line->end_date) * $line->car->price;
         }
 
+        $btw = $total / 100 * 21;
+        $total += $btw;
         $data = [
             'invoice' => $invoice,
             'user' => $user,
             'invoice_lines' => $invoice_lines,
-            'total' => $total
+            'total' => $total,
+            'btw' => $btw
         ];
         // Make new dompdf wrapper for the pdf
         $pdf = App::make('dompdf.wrapper');

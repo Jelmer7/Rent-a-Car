@@ -94,7 +94,34 @@
                             @endforeach
                             <tr>
                                 <td>
+                                <strong>BTW</strong>
+                                </td>
+                                <td>
 
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                <td>
+
+                                </td>
+                                {{--<td></td>--}}
+                                {{--<td></td>--}}
+                                {{--<td></td>--}}
+                                <td>
+                                    {{$btw}}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <strong>Totaal</strong>
                                 </td>
                                 <td>
 
