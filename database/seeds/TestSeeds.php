@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\User;
-use App\Role;
+use app\User;
+use app\Role;
 
-class UsersTableSeeder extends Seeder
+class TestSeeds extends Seeder
 {
     /**
      * Run the database seeds.
@@ -20,15 +20,26 @@ class UsersTableSeeder extends Seeder
 
         $users = [
             [
-                'initials' => 'M.',
-                'insertion' => 'de',
-                'surname' => 'Medewerker',
-                'email' => 'medewerker@test.nl',
+                'initials' => 'T.',
+                'insertion' => '',
+                'surname' => 'Test',
+                'email' => 'test@test.nl',
                 'password' => bcrypt('123456'),
-                'address' => 'medewerkerweg 3',
-                'postal_code' => '7652 TD',
-                'residence' => 'Meeddorp',
+                'address' => 'Teststraat 1',
+                'postal_code' => '7751 TT',
+                'residence' => 'Teststad',
                 'roles' => ['employee']
+            ],
+            [
+                'initials' => 'K.',
+                'insertion' => '',
+                'surname' => 'Klant',
+                'email' => 'klant@test.nl',
+                'password' => bcrypt('123456'),
+                'address' => 'Klantstraat 2',
+                'postal_code' => '7751 KL',
+                'residence' => 'Teststad',
+                'roles' => ['customer']
             ]
         ];
 
