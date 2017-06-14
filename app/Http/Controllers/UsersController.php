@@ -39,6 +39,23 @@ class UsersController extends Controller
         return view('users.edit', compact('user'));
     }
 
+    public function update(Request $request, $id){
+        $user = User::FindorFail($id);
+        if($request['password'] != ""){
+            $user->password = bcrypt($request['password']);
+        }
+
+        $user->initials = $request['initials'];
+        $user->insertion = $request['insertion'];
+        $user->surname = $request['surname'];
+        $user->email = $request['email'];
+        $user->address = $request['address'];
+        $user->postal_code = $request['postal_code'];
+        $user->residence = $request['residence'];
+        $user->update();
+        return redirect('users');
+    }
+
     public function self(){
         $user = User::FindorFail(Auth::user()->id);
         return view('users.self_form', compact('user'));

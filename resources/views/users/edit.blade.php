@@ -14,7 +14,7 @@
                     <div class="box-body">
                         <p>U kunt het wachtwoord leeg laten als u dat niet wilt veranderen</p>
 
-                        {!! Form::model($user,['method' => 'PATCH', 'action' => ['UsersController@selfupdate', $user->id]]) !!}
+                        {!! Form::model($user,['method' => 'PATCH', 'action' => ['UsersController@update', $user->id]]) !!}
                         {!! csrf_field() !!}
 
                         <div class="form-group has-feedback {{ $errors->has('initials') ? 'has-error' : '' }}">

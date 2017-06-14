@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'Rent-a-Car',
 
     'title_prefix' => '',
 
