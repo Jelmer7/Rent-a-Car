@@ -9,8 +9,6 @@
             <h1>Auto's</h1>
         </div>
     </section>
-	12313452345
-	geentestxcvxcvxcvxcv
 
     <section class="content">
         <div class="row">
